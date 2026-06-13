@@ -1,3 +1,13 @@
+void update(string[] args)
+{
+output("Staging all files...");
+output(shell.send_wait("git add ."));
+output("commiting...");
+output(shell.send_wait("git commit"));
+output("pushing...");
+output(shell.send_wait("git push"));
+output("Update complete.");
+}
 void new(string[] args)
 {
 if(in_project())
