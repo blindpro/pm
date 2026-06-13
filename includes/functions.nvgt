@@ -1,0 +1,4 @@
+void output(string text)
+{
+cli.output(text);
+}
