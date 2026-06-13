@@ -1,5 +1,10 @@
 void new(string[] args)
 {
+if(directory_exists(".pm"))
+{
+output("You can not create a project inside of another project.");
+return;
+}
 string name = args[1];
 output("Creating directory...");
 directory_create(name);
