@@ -1,8 +1,10 @@
-void new(string name)
+void new(string[] args)
 {
+string name = args[1];
 directory_create(name);
 chdir(name);
 directory_create("includes");
+directory_create(".pm");
 shell.send_wait("git init");
 output("project created.");
 }
