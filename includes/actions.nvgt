@@ -1,4 +1,4 @@
-void update(string[] args)
+void sync(string[] args)
 {
 if(!s.has_git)
 {
@@ -7,7 +7,7 @@ return;
 }
 else if(!in_project())
 {
-output("Please enter a project first before updating.");
+output("Please enter a project first before syncing.");
 return;
 }
 output("Staging all files...");
@@ -21,7 +21,7 @@ return;
 }
 output("pushing...");
 output(shell.send_wait("git push"));
-output("Update complete.");
+output("sync complete.");
 }
 void new(string[] args)
 {
