@@ -1,0 +1,32 @@
+#pragma plugin cmd_runner
+class cmd
+{
+bool powershell;
+string log_path;
+cmd(string log_path = cmd_make_log_path(),bool powershell = false)
+{
+this.log_path = log_path;
+this.powershell = powershell;
+}
+string send_wait(string command)
+{
+return cmd_run(command,powershell);
+}
+bool send(string command)
+{
+int num = cmd_run_async(command,log_path,powershell);
+return num == 0;
+}
+string read()
+{
+return cmd_read_log(log_path, powershell);
+}
+bool log_available()
+{
+return cmd_log_exists(log_path);
+}
+void remove_log()
+{
+cmd_delete_log(log_path);
+}
+}
