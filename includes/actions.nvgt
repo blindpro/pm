@@ -1,6 +1,6 @@
 void new(string[] args)
 {
-if(directory_exists(".pm"))
+if(in_project())
 {
 output("You can not create a project inside of another project.");
 return;

@@ -6,3 +6,7 @@ bool is_blank(string str)
 {
 return str == "";
 }
+bool in_project()
+{
+return directory_exists(".pm");
+}
