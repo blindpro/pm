@@ -2,5 +2,6 @@
 console_manager cli;
 int main()
 {
+parse();
 return 0;
 }

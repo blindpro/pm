@@ -1,0 +1,9 @@
+void parse()
+{
+string[] args = cli.args;
+string base = args[0];
+if(base == "")
+{
+output("usige. coming soon.");
+}
+}
