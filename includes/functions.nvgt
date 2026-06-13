@@ -2,3 +2,7 @@ void output(string text)
 {
 cli.output(text);
 }
+bool is_blank(string str)
+{
+return str == "";
+}

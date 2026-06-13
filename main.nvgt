@@ -1,5 +1,6 @@
 #include"includes/*.nvgt"
 console_manager cli;
+cmd shell;
 int main()
 {
 parse();

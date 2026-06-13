@@ -1,0 +1,8 @@
+void new(string name)
+{
+directory_create(name);
+chdir(name);
+directory_create("includes");
+shell.send_wait("git init");
+output("project created.");
+}
