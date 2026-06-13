@@ -1,0 +1,20 @@
+class state
+{
+bool has_git;
+bool has_remotes;
+state()
+{
+has_git = check_git();
+has_remotes = check_remote();
+}
+bool check_git()
+{
+string checker = shell.send_wait("git version");
+return checker.find("not recognized")>-1;
+}
+bool check_remote()
+{
+string checker = shell.send_wait("git remote");
+return checker!="blank";
+}
+}
