@@ -16,7 +16,7 @@ output("commiting...");
 output(shell.send_wait("git commit"));
 if(!s.has_remotes)
 {
-output("Not pushing because no remotes found");
+output("Not pushing because no remotes found.");
 return;
 }
 output("pushing...");
@@ -39,6 +39,6 @@ directory_create("includes");
 output("Creating configuration folder...");
 directory_create(".pm");
 output("Creating git repo...");
-shell.send_wait("git init");
+output(shell.send_wait("git init"));
 output("project created.");
 }
