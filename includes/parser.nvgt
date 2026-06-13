@@ -9,7 +9,7 @@ return;
 string base = args[0];
 if(base == "new" and !is_blank(args[1]))
 {
-new(args[1]);
+new(args);
 }
 
 }

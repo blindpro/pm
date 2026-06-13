@@ -1,10 +1,14 @@
 void new(string[] args)
 {
 string name = args[1];
+output("Creating directory...");
 directory_create(name);
 chdir(name);
+output("Creating includes...");
 directory_create("includes");
+output("Creating configuration folder...");
 directory_create(".pm");
+output("Creating git repo...");
 shell.send_wait("git init");
 output("project created.");
 }
