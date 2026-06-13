@@ -2,7 +2,12 @@ void update(string[] args)
 {
 if(!s.has_git)
 {
-Toutput("git not found");
+output("git not found");
+return;
+}
+else if(!in_project())
+{
+output("Please enter a project first before updating.");
 return;
 }
 output("Staging all files...");
