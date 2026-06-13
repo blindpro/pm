@@ -3,7 +3,7 @@ void parse()
 string[] args = cli.args;
 if(args.empty())
 {
-output("usage. Coming soon.");
+output("usage. New <name>: Create a new project with the given name.");
 return;
 }
 string base = args[0];
