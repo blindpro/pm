@@ -3,7 +3,9 @@ void parse()
 string[] args = cli.args;
 if(args.empty())
 {
-output("usage. New <name>: Create a new project with the given name. sync. Sync project with git.");
+output("usige.\n");
+output("New <name>. Create a new project using the given name.\n");
+output("sync. Sync current project with git.\n");
 return;
 }
 string base = args[0];
@@ -11,9 +13,12 @@ if(base == "sync")
 {
 sync(args);
 }
+else if(base == "status")
+{
+status();
+}
 else if(base == "new" and !is_blank(args[1]))
 {
 new(args);
 }
-
 }

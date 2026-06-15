@@ -42,3 +42,8 @@ output("Creating git repo...");
 output(shell.send_wait("git init"));
 output("project created.");
 }
+void status()
+{
+output("Current project status.\n");
+output(shell.send_wait("git status"));
+}
