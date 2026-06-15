@@ -1,3 +1,4 @@
+#pragma console
 #include"includes/*.nvgt"
 console_manager cli;
 cmd shell;
