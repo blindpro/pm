@@ -1,6 +1,7 @@
 void output(string text)
 {
 cli.output(text);
+cli.output("\n");
 }
 bool is_blank(string str)
 {
