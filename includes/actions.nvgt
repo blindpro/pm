@@ -41,6 +41,9 @@ directory_create(".pm");
 output("Creating git repo...");
 output(shell.send_wait("git init"));
 output("project created.");
+s.config.set("has_git",s.has_git);
+s.config.set("has_remotes",s.has_remotes);
+s.config.save(".pm/config");
 }
 void status()
 {

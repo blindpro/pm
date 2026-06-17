@@ -1,11 +1,16 @@
 class state
 {
+tiny_config config;
 bool has_git;
 bool has_remotes;
 state()
 {
 has_git = check_git();
 has_remotes = check_remote();
+if(in_project())
+{
+config.load(".pm/config");
+}
 }
 bool check_git()
 {
