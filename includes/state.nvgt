@@ -3,6 +3,8 @@ class state
 tiny_config config;
 bool has_git;
 bool has_remotes;
+string language;
+string main_script;
 state()
 {
 has_git = check_git();
