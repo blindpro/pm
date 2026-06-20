@@ -24,4 +24,13 @@ bool check_remote()
 string checker = shell.send_wait("git remote");
 return checker!="blank";
 }
+string get_run_command()
+{
+string l = language.lower();
+if(l == "nvgt")
+{
+return "nvgt "+main_script;
+}
+return "none";
+}
 }
