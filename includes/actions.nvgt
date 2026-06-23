@@ -50,9 +50,9 @@ s.config.set("language",s.language);
 output("Please enter the main script of your project, including the exstention.");
 s.main_script = cli.get_input();
 output("Main script file. "+s.main_script);
-s.config.set("main script",s.main_script);
-s.config.set("run command",s.get_run_command());
-s.config.set("build command",s.get_build_command());
+s.config.set("main_script",s.main_script);
+s.config.set("run_command",s.get_run_command());
+s.config.set("build_command",s.get_build_command());
 s.config.save(".pm/config");
 }
 void status()
