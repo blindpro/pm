@@ -33,4 +33,13 @@ return "nvgt "+main_script;
 }
 return "none";
 }
+string get_build_command()
+{
+string l = language.lower();
+if(l == "nvgt")
+{
+return "nvgt -c "+main_script;
+}
+return "none";
+}
 }
