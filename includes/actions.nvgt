@@ -41,6 +41,15 @@ directory_create(".pm");
 output("Creating git repo...");
 output(shell.send_wait("git init"));
 output("project created.");
+create_config();
+}
+void status()
+{
+output("Current project status.\n");
+output(shell.send_wait("git status"));
+}
+void create_config()
+{
 s.config.set("has_git",s.has_git);
 s.config.set("has_remotes",s.has_remotes);
 output("Please enter your projects language");
@@ -54,9 +63,4 @@ s.config.set("main_script",s.main_script);
 s.config.set("run_command",s.get_run_command());
 s.config.set("build_command",s.get_build_command());
 s.config.save(".pm/config");
-}
-void status()
-{
-output("Current project status.\n");
-output(shell.send_wait("git status"));
 }
