@@ -12,7 +12,15 @@ has_remotes = check_remote();
 if(in_project())
 {
 config.load(".pm/config");
+if(config.is_empty())
+{
+create_config();
 }
+config.set("has_git",has_git);
+config.set("has_remotes",has_remotes);
+}
+language = config.get("language");
+main_script = config.get("main_script");
 }
 bool check_git()
 {
