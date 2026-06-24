@@ -16,6 +16,7 @@ if(in_project())
 config.load(".pm/config");
 if(config.is_empty())
 {
+output("Something is wrong with your config. Lets recreate it first.");
 create_config();
 }
 config.set("has_git",has_git);
