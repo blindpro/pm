@@ -1,0 +1,29 @@
+funcdef void handaler(string[]);
+command[] commands;
+class command
+{
+string name;
+handaler@ action;
+command(string name, handaler@func)
+{
+this.name = name;
+@action = @func;
+}
+command()
+{
+name = "none";
+@action = null;
+}
+void exsacute()
+{
+action(cli.args);
+}
+bool check(string[] args)
+{
+if(args.length()<1)
+{
+return false;
+}
+return args[0] == name;
+}
+}

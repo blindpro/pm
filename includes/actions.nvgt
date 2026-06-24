@@ -5,7 +5,6 @@ if(!s.has_git)
 output("git not found");
 return;
 }
-
 output("Staging all files...");
 output(shell.send_wait("git add ."));
 output("commiting...");
@@ -13,6 +12,7 @@ output(shell.send_wait("git commit"));
 if(!s.has_remotes)
 {
 output("Not pushing because no remotes found.");
+output("sync complete.");
 return;
 }
 output("pushing...");
