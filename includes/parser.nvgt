@@ -8,6 +8,11 @@ output_usage();
 return;
 }
 string base = args[0];
+if(!in_project() and base!= "new")
+{
+output("Please enter a project first");
+return;
+}
 for(int i = 0; i<commands.length(); i++)
 {
 if(commands[i].name == base)

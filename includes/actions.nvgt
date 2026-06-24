@@ -5,11 +5,7 @@ if(!s.has_git)
 output("git not found");
 return;
 }
-else if(!in_project())
-{
-output("Please enter a project first before syncing.");
-return;
-}
+
 output("Staging all files...");
 output(shell.send_wait("git add ."));
 output("commiting...");
