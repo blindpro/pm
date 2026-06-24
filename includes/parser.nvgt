@@ -1,5 +1,6 @@
 void parse()
 {
+bool exsacuted = false;
 string[] args = cli.args;
 if(args.empty())
 {
@@ -12,8 +13,11 @@ for(int i = 0; i<commands.length(); i++)
 if(commands[i].name == base)
 {
 commands[i].exsacute();
-break;
+exsacuted = true;
 }
 }
+if(!exsacuted)
+{
 output(base+" is not a pm command.");
+}
 }
