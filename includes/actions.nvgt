@@ -69,3 +69,25 @@ void help(string[] args)
 output("pm help.");
 output_usage();
 }
+void build(string[] args)
+{
+string command = s.build_command;
+if(command == "none" or command == "")
+{
+output("No build command for your project.");
+return;
+}
+output("building...");
+output(shell.send_wait(command));
+}
+void run(string[] args)
+{
+string command = s.run_command;
+if(command == "none" or command == "")
+{
+output("No run command for your project.");
+return;
+}
+output("running...");
+output(shell.send_wait(command));
+}

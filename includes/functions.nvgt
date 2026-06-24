@@ -4,6 +4,8 @@ commands.insert_last(command("new",new));
 commands.insert_last(command("sync",sync));
 commands.insert_last(command("status",status));
 commands.insert_last(command("help",help));
+commands.insert_last(command("build",build));
+commands.insert_last(command("run",run));
 }
 void output_usage()
 {
