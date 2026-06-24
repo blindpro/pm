@@ -1,3 +1,9 @@
+void registor_commands()
+{
+commands.insert_last(command("new",new));
+commands.insert_last(command("sync",sync));
+commands.insert_last(command("status",status));
+}
 void output(string text)
 {
 cli.output(text);

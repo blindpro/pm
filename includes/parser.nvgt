@@ -9,16 +9,13 @@ output("sync. Sync current project with git.\n");
 return;
 }
 string base = args[0];
-if(base == "sync")
+for(int i = 0; i<commands.length(); i++)
 {
-sync(args);
-}
-else if(base == "status")
+if(commands[i].name == base)
 {
-status();
+commands[i].exsacute();
+break;
 }
-else if(base == "new" and !is_blank(args[1]))
-{
-new(args);
 }
+output(base+" is not a pm command.");
 }

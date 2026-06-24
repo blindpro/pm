@@ -5,6 +5,7 @@ cmd shell;
 state s;
 int main()
 {
+registor_commands();
 parse();
 return 0;
 }

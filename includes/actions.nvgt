@@ -43,7 +43,7 @@ output(shell.send_wait("git init"));
 output("project created.");
 create_config();
 }
-void status()
+void status(string[] args)
 {
 output("Current project status.\n");
 output(shell.send_wait("git status"));
