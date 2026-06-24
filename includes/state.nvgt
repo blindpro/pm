@@ -24,8 +24,8 @@ main_script = config.get("main_script");
 }
 bool check_git()
 {
-string checker = shell.send_wait("git version");
-return checker.find("not recognized")>-1;
+string checker = shell.send_wait("git");
+return checker.find("usage")>-1;
 }
 bool check_remote()
 {
