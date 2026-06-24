@@ -3,6 +3,13 @@ void registor_commands()
 commands.insert_last(command("new",new));
 commands.insert_last(command("sync",sync));
 commands.insert_last(command("status",status));
+commands.insert_last(command("help",help));
+}
+void output_usage()
+{
+output("usage.");
+output("New <name>. Create a new project using the given name.");
+output("sync. Sync current project with git.");
 }
 void output(string text)
 {

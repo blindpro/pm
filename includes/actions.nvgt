@@ -64,3 +64,8 @@ s.config.set("run_command",s.get_run_command());
 s.config.set("build_command",s.get_build_command());
 s.config.save(".pm/config");
 }
+void help(string[] args)
+{
+output("pm help.");
+output_usage();
+}
