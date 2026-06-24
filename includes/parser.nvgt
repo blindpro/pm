@@ -3,9 +3,9 @@ void parse()
 string[] args = cli.args;
 if(args.empty())
 {
-output("usige.\n");
-output("New <name>. Create a new project using the given name.\n");
-output("sync. Sync current project with git.\n");
+output("usige.");
+output("New <name>. Create a new project using the given name.");
+output("sync. Sync current project with git.");
 return;
 }
 string base = args[0];
