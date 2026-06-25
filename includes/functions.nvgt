@@ -6,6 +6,7 @@ commands.insert_last(command("status",status));
 commands.insert_last(command("help",help));
 commands.insert_last(command("build",build));
 commands.insert_last(command("run",run));
+commands.insert_last(command("config",config));
 }
 void output_usage()
 {

@@ -87,3 +87,20 @@ return;
 output("running...");
 output(shell.send_wait(command));
 }
+void config(string[] args)
+{
+if(args.length()!= 3)
+{
+output("usage. Config key value, set any key in your config.");
+return;
+}
+string key = args[1];
+string value = args[2];
+if(!s.config.key_exists(key))
+{
+output("this is not a key in your config.");
+return;
+}
+s.config.set(key,value);
+output(key+" changed to "+value);
+}
