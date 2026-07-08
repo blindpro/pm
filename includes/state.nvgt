@@ -53,6 +53,10 @@ if(l == "nvgt")
 {
 return "nvgt -c "+main_script;
 }
+else if(l == "hugo")
+{
+return "hugo";
+}
 return "none";
 }
 }
