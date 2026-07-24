@@ -44,6 +44,10 @@ if(l == "nvgt")
 {
 return "nvgt "+main_script;
 }
+else if(l == "python")
+{
+return "py "+main_script;
+}
 return "none";
 }
 string get_build_command()
