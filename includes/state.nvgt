@@ -7,6 +7,7 @@ string language;
 string main_script;
 string build_command;
 string run_command;
+string build_script;
 state()
 {
 has_git = check_git();
@@ -24,6 +25,7 @@ config.set("has_remotes",has_remotes);
 }
 language = config.get("language");
 main_script = config.get("main_script");
+build_script = config.get("build script");
 build_command = config.get("build_command");
 run_command = config.get("run_command");
 }
