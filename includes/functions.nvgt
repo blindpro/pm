@@ -13,6 +13,8 @@ void output_usage()
 output("usage.");
 output("New <name>. Create a new project using the given name.");
 output("sync. Sync current project with git.");
+output("status. Get the projects status.");
+output("Help. See this message again.");
 }
 void output(string text)
 {
